@@ -1,11 +1,3 @@
---model config to override db_project.yml config
-{{
-  config(
-    materialized='table'
-  )
-}}
-
---CTEs
 with customers as (
     select * from {{ ref('stg_customers') }}
 ),

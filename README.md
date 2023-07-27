@@ -24,6 +24,11 @@ select * from `dbt-tutorial.jaffle_shop.orders`;
 select * from `dbt-tutorial.stripe.payment`;
 ```
 
+## Steps for adding sources
+
+1. Add source yml files in each of the staging subfolders based on each schema/dataset
+2. Add checks for source freshness
+
 ### dbt default readme docs
 
 Try running the following commands:

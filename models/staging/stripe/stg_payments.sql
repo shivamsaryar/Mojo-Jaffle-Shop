@@ -10,7 +10,7 @@ select
     --convert_timezone('','AEST',created)  as created_at_AEST,
     created as created_at,
     
-    --_batched_at
+    _batched_at
 
 from 
     {{ source('stripe', 'payment') }}

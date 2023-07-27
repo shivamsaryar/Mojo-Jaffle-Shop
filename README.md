@@ -70,8 +70,15 @@ Add source table and columm descriptions in the 'jaffle_shop sources yml file' `
 #### dbt comannds for generating documentation
     dbt docs generate
 
+## Development and Deployment workflow
+Deployment happens on a dedicated (default) branch and in a dedicated production schema.
 
+- Development schema name: `dbt_shivamsaryar` or `dbt_dev1`
+- Deployment schema names: `dbt_production` or `analytics`
+    -   Houses all final tables to be used by analysts and dashboards
 
+### Steps
+1. Merge dbt branch with the main/default branch (via pull requests)
 
 ### dbt default readme docs
 

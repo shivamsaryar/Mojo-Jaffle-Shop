@@ -12,4 +12,5 @@ select
     
     --_batched_at
 
-from `dbt-tutorial.stripe.payment`
+from 
+    {{ source('stripe', 'payment') }}

@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: stripe
+    description: "Clone of a Postgres application database, available as a public dataset in Google BigQuery that can be accesses using its project ID `dbt-tutorial` and dataset ID `stripe`. Sample SQL: `select * from dbt-tutorial.stripe.payment`"
     database: dbt-tutorial
     schema: stripe
     tables:

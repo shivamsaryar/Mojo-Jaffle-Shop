@@ -49,6 +49,30 @@ Added testing parameters to the following file: `models/staging/jaffle_shop/src_
 #### dbt source Testing command
 Execute the test for the source name 'jaffle_shop' using `dbt test --select source:jaffle_shop`
 
+## Documentation
+
+### A. Documenting models
+
+#### Adding documentation into yml files
+Add model table and columm descriptions in the 'jaffle_shop staging yml file' `models/staging/jaffle_shop/stg_jaffle_shop.yml` where all info about the models like tests and docs should be stored.
+
+#### Adding documentation using doc blocks
+Create a new doc blocks md file `models/staging/jaffle_shop/doc_jaffle_shop.md`. This markdown file can contain multiple doc blocks for different tables and columns.
+Add the following to the `models/staging/jaffle_shop/stg_jaffle_shop.yml` file under status column of orders table to reference the doc block. 
+
+    description: '{{ doc("order_status") }}'
+
+### B. Documenting sources
+Add source table and columm descriptions in the 'jaffle_shop sources yml file' `models/staging/jaffle_shop/src_jaffle_shop.yml` where all info about the sources like tests and docs should be stored.
+
+### C. Generating documentation
+
+#### dbt comannds for generating documentation
+    dbt docs generate
+
+
+
+
 ### dbt default readme docs
 
 Try running the following commands:
